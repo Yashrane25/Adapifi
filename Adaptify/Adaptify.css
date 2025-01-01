@@ -1,0 +1,786 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to left, #121c2b, #05080f);
+  height: 70px;
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+body {
+  background: linear-gradient(to right, #05080f, #0f1724, #121c2b);
+  height: 100vh;
+  margin-top: 70px;
+}
+
+.logo-image{
+  height: 55px;
+  width: 65px;
+}
+
+.logoName{
+  color: whitesmoke;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Glacial Indifference', sans-serif;
+  letter-spacing: 5px;
+}
+
+.main-logo-and-name{
+  margin-left: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .logo {
+  font-size: 2rem;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: bold;
+  padding: 30px;
+  color: rgb(10, 131, 179);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+} */
+
+.nav-a {
+  color: rgb(158, 158, 158);
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 5px 18px;
+  position: relative;
+  display: inline-block;
+}
+
+.nav-a:after {
+  content: "";
+  position: absolute;
+  background-color: rgb(14, 169, 230);
+  left: 0;
+  width: 0;
+  bottom: -5px;
+  height: 2px;
+  transition: 0.3s ease;
+}
+
+.nav-a:hover {
+  color: white;
+}
+
+.nav-a:hover:after {
+  width: 100%;
+}
+
+.btn {
+  padding: 7px 12px;
+  margin: 0 40px;
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 10%;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+  transition: color 0.5s ease;
+  transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;}
+
+.btn:hover {
+  padding: 7px 12px;
+  margin: 0 40px;
+  border: none;
+  transition: background-color 0.3s ease;
+  background-color: rgb(226, 226, 226);
+  color: rgb(10, 131, 179);
+  font-size: 14px;
+  transform: scale(1.05); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.main-div {
+  display: flex;
+}
+
+.head {
+  color: whitesmoke;
+  padding: 60px 20px;
+}
+
+h1 {
+  padding: 0px 10px;
+}
+
+.h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  line-height: 60px;
+  color: whitesmoke;
+}
+
+.gradient_h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 45px;
+  background: linear-gradient(to right, rgb(10, 131, 179), rgb(172, 84, 196));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.h2 {
+  padding: 40px 10px;
+  font-size: 18px;
+  font-family: "Nunito Sans", sans-serif;
+  line-height: 35px;
+  color: rgb(219, 219, 219);
+}
+
+.main-image {
+  width: 600px;
+  height: 400px;
+  object-fit: contain;
+  object-fit: cover;
+  color: whitesmoke;
+  margin-top: 50px;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  display: flex;
+  justify-self: center;
+  border-radius: 10px;
+  box-sizing: 100px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-image:hover {
+  transform: scale(1.02); 
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.6); 
+}
+
+.tag-line {
+  color: rgb(224, 224, 224);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+}
+
+.gradient-part-1{
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.gradient-part-2 {
+  font-family: "Nunito Sans", sans-serif;
+  background: linear-gradient(to right, whitesmoke, rgb(123, 201, 250));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.gradient-part-3 {
+  font-family: "Nunito Sans", sans-serif;
+  background: linear-gradient(to right, rgb(123, 201, 250), whitesmoke);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.gradient-part-4{
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.gradient-part-5 {
+  font-family: "Nunito Sans", sans-serif;
+  background: linear-gradient(to right, whitesmoke, rgb(169, 102, 187));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.what-is-adaptify {
+  color: rgb(219, 219, 219);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px;
+  padding: 10px;
+  font-weight: bold;
+  word-spacing: 3px;
+  font-size: 30px;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.what-is-adaptify.animate {
+  animation: slideUp 0.8s ease forwards;
+}
+
+.tutorial-div-1{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.eye-tutorial {
+ display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 500px;
+  margin-left: 50px;
+}
+
+.eye-info{
+  color: whitesmoke;
+  margin-left: 40px;
+  padding-bottom: 50px;
+  padding-right: 30px;
+  padding-top: 15px;
+  height: 70%;
+  line-height: 30px;
+  word-spacing: 2px;
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  line-height: 35px;
+  color: rgb(219, 219, 219);
+  opacity: 0;
+  transform: translateX(-50px); 
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.eye-info h1{
+  padding: 0px;
+  font-weight: bold;
+  color: whitesmoke;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 45px;
+  background: linear-gradient(to right, rgb(134, 206, 251), rgb(229, 147, 252));
+  -webkit-background-clip: text;
+  color: transparent;
+  padding-bottom: 20px;
+  opacity: 0;
+  transform: translateX(-30px); 
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.tutorial-1 {
+  height: 70%;
+  width: 300%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 16, 13, 0.5); 
+  background: linear-gradient(to left, #000714, #060009); 
+  backdrop-filter: blur(10px); 
+  opacity: 0;
+  transform: translateX(50px); 
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  box-shadow: 7.5px 7.5px 15px rgba(0, 0, 0, 0.6); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tutorial-1.visible {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 1s ease, transform 0.5s ease;
+}
+
+
+.gesture-tutorial{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 500px;
+  margin-right: 50px;
+}
+
+.gesture-info{
+  color: whitesmoke;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-top: 15px;
+  padding-right: 30px;
+  height: 70%;
+  line-height: 25px;
+  word-spacing: 2px;
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  line-height: 35px;
+  color: rgb(219, 219, 219);
+  opacity: 0;
+  transform: translateX(50px); 
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.gesture-info h1{
+  padding: 0px;
+  margin-top: 0px;
+  font-size: 45px;
+  font-family: "Nunito Sans", sans-serif;
+  background: linear-gradient(to right, rgb(134, 206, 251), rgb(229, 147, 252));
+  -webkit-background-clip: text;
+  color: transparent;
+  padding-bottom: 20px;
+  opacity: 0;
+  transform: translateX(30px); 
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.tutorial-2 {
+  height: 70%;
+  width: 300%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 16, 13, 0.5); 
+  background: linear-gradient(to left, #000714, #060009); 
+  backdrop-filter: blur(10px); 
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.5s ease, transform 0.5s ease; 
+  box-shadow: 7.5px 7.5px 15px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tutorial-2.visible {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 1s ease, transform 0.5s ease;
+}
+
+
+.speech-tutorial{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 500px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+
+.speech-info{
+  color: whitesmoke;
+  margin-left: 40px;
+  padding-bottom: 50px;
+  padding-right: 30px;
+  padding-top: 15px;
+  height: 70%;
+  line-height: 30px;
+  word-spacing: 2px;
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  line-height: 35px;
+  color: rgb(219, 219, 219);
+  opacity: 0;
+  transform: translateX(-50px); 
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.speech-info h1{
+  padding: 0px;
+  font-weight: bold;
+  color: whitesmoke;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 45px;
+  background: linear-gradient(to right, rgb(134, 206, 251), rgb(229, 147, 252));
+  -webkit-background-clip: text;
+  color: transparent;
+  padding-bottom: 20px;
+  opacity: 0;
+  transform: translateX(-30px); 
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+
+.tutorial-3 {
+  height: 70%;
+  width: 285%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 16, 13, 0.5); 
+  background: linear-gradient(to left, #000714, #060009); 
+  backdrop-filter: blur(10px);  
+  opacity: 0;
+  transform: translateX(50px); 
+  transition: opacity 0.5s ease, transform 0.5s ease; 
+  box-shadow: 7.5px 7.5px 15px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tutorial-3.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s ease, transform 0.5s ease;
+}
+
+.eye-info.visible, .gesture-info.visible, .speech-info.visible {
+  opacity: 1;
+  transform: translateY(0); 
+}
+
+.eye-info h1.visible, .gesture-info h1.visible, .speech-info h1.visible {
+  opacity: 1;
+  transform: translateY(0); 
+}
+
+.tutorial-1:hover,
+.tutorial-2:hover,
+.tutorial-3:hover {
+  transform: scale(1.03); 
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.image-1,
+.image-2,
+.image-3 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(10px); 
+  border-radius: 10px; /
+}
+
+.image-1 img,
+.image-2 img,
+.image-3 img {
+  width: 96%;
+  height: 96%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  background-color: #05080f;
+  color: whitesmoke;
+}
+
+.image-1-h3,
+.image-2-h3,
+.image-3-h3{
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;              
+  height: 100%; 
+}
+
+
+
+
+
+/*Login page*/ 
+
+.login-body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins',sans-serif;
+  background: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  animation: fadeIn 0s ease-out;
+  background: linear-gradient(to right, #05080f, #0f1724, #121c2b);
+}
+
+.login-body.loaded {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #05080f, #0f1724, #121c2b);
+}
+
+.box{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  padding: 10px 20px 10px 20px;
+  /* margin-top: 50px;
+  margin-bottom: 50px; */
+  height: 500px;
+  width: 350px;
+  border-radius: 30px;
+  background-color: rgb(4, 32, 44);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  box-shadow: 2px 4px 20px rgb(0, 0, 0);
+  overflow: hidden;
+}
+
+.cancel-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  color: #555;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  color: #d9d8d8;
+}
+
+.box-login{
+  position: absolute;
+  width: 85%;
+  left: 27px;
+  transition: .3s ease-in-out;
+}
+
+.box-register{
+  position: absolute;
+  width: 85%;
+  right: -350px;
+  transition: .3s ease-in-out;
+}
+.top-header{
+  text-align: center;
+  margin: 15px 0;
+  color: rgb(212, 212, 212);
+}
+.top-header h3{
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  background: linear-gradient(to right, rgb(134, 206, 251), rgb(229, 147, 252));
+  -webkit-background-clip: text;
+  color: transparent;  font-family: "Nunito Sans", sans-serif;
+}
+.input-group{
+   width: 100%;
+  
+}
+.input-field{
+  margin: 12px 0;
+  position: relative;
+}
+.input-box{
+  width: 100%;
+  height: 50px;
+  font-size: 15px;
+  color: #040404;
+  border: none;
+  border-radius: 10px;
+  padding: 7px 45px 0 20px;
+  background: rgba(224, 223, 223, 0.6);
+  backdrop-filter: blur(2px);
+  outline: none;
+}
+.input-field label{
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  font-size: 15px;
+  transition: .3s ease-in-out;
+}
+.input-box:focus ~ label,.input-box:valid ~ label{
+  top: 2px;
+  font-size: 10px;
+  color: #121c2b;
+  font-weight: 500;
+}
+.remember{
+  display: flex;
+  font-size: 13px;
+  margin: 12px 0 30px 0;
+  color: whitesmoke;
+}
+.check{
+  margin-right: 8px;
+  width: 14px;
+}
+.input-submit{
+  width: 100%;
+  height: 50px;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: #fff;
+  box-shadow: 0px 4px 20px #0f1724;
+  cursor: pointer;
+  transition: .2s;
+}
+.input-submit:hover{
+  background:  #0f1724;
+  box-shadow: 0px 4px 20px #0f1724;
+}
+.forgot{
+  text-align: start;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+.forgot a{
+  text-decoration: none;
+  color: #000;
+  font-size: 10px;
+  color: rgb(41, 63, 188);
+  margin-left: 5px;
+  padding: 0px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.forgot a:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.forgot a::after {
+  content: 'Click to recover your password'; 
+  position: absolute;
+  bottom: 120%; 
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000; 
+  color: #fff; 
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  opacity: 0;
+  visibility: hidden;
+  white-space: nowrap;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.forgot a:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.switch{
+  display: flex;
+  position: absolute;
+  bottom: 50px;
+  left: 25px;
+  width: 85%;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.switch a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+  width: 50%;
+  height: 50px;
+  border-radius: 10px;
+  z-index: 10;
+}
+#btn{
+  position: absolute;
+  bottom: 0px;   
+  left: 0px;
+  width: 149px;
+  height: 50px;
+  background: #cccccd;
+  border-radius: 10px;
+  box-shadow: 2px 0px 12px rgba(0, 0, 0, 0.1);
+  transition: .5s ease-in-out;
+}
+.eye-area{
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+.eye-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  
+}
+i{
+  position: absolute;
+  color: #444444;
+  cursor: pointer;
+}
+#eye,#eye-2{
+  opacity: 1;
+}
+#eye-slash,#eye-slash-2{
+  opacity: 0;}
+@media only screen and (max-width: 576px){
+  .box{
+      margin: 0 5px;
+  }
+  #btn{
+      position: absolute;
+      width: 153px;
+  }
+}
