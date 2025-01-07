@@ -1,3 +1,66 @@
+/* Scrole animations */
+document.addEventListener("scroll", () => {
+  const whatIsAdaptify = document.querySelector(".WelcomeToAdaptify");
+  const rect = whatIsAdaptify.getBoundingClientRect();
+
+  if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+    whatIsAdaptify.classList.add("animate");
+  }
+});
+
+document.addEventListener('scroll', () => {
+  const listItems = document.querySelectorAll('.list');
+
+  listItems.forEach((item) => {
+    const itemPosition = item.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.1;
+
+    if (itemPosition < screenPosition) {
+      item.style.opacity = '1';
+      item.style.transform = 'translateX(0)';
+    }
+  });
+});
+
+document.addEventListener('scroll', () => {
+  const elements = document.querySelectorAll('.aboutEnd');
+
+  elements.forEach((element) => {
+    const elementPosition = element.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.3;
+
+    if (elementPosition < screenPosition) {
+      element.style.opacity = '1';
+      element.style.transform = 'translateY(0)';
+    }
+  });
+});
+
+
+document.addEventListener('scroll', () => {
+  const aboutInfo = document.querySelector('.aboutInfo2');
+  const aboutInfoPosition = aboutInfo.getBoundingClientRect().top;
+  const screenPosition = window.innerHeight / 1.1;
+
+  if (aboutInfoPosition < screenPosition) {
+    aboutInfo.style.opacity = '1';
+    aboutInfo.style.transform = 'translateY(0)';
+  }
+});
+
+
+document.addEventListener('scroll', () => {
+  const aboutInfo = document.querySelector('.aboutInfo');
+  const aboutInfoPosition = aboutInfo.getBoundingClientRect().top;
+  const screenPosition = window.innerHeight / 1.1;
+
+  if (aboutInfoPosition < screenPosition) {
+    aboutInfo.style.opacity = '1';
+    aboutInfo.style.transform = 'translateY(0)';
+  }
+});
+
+
 document.addEventListener("scroll", () => {
   const whatIsAdaptify = document.querySelector(".what-is-adaptify");
   const rect = whatIsAdaptify.getBoundingClientRect();
@@ -92,3 +155,18 @@ document.getElementById("home").addEventListener("click", function (event) {
     behavior: "smooth",
   });
 });
+
+/*Click About menu*/
+document.getElementById("about").addEventListener("click", function (event) {
+  event.preventDefault();
+  const targetSection = document.getElementById("welcome-section");
+  
+  const offsetPosition = targetSection.offsetTop - 80; 
+  
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: "smooth"
+  });
+});
+
+

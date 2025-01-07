@@ -227,6 +227,113 @@ h1 {
   color: transparent;
 }
 
+.about{
+  color: whitesmoke;
+  margin: 20px;
+  padding: 30px;
+  background: linear-gradient(to left, #121c2b, #05080f);
+  border-radius: 10px;
+}
+
+.WelcomeToAdaptify{
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 80px;
+  padding: 10px;
+  font-weight: bold;
+  word-spacing: 3px;
+  font-size: 50px;
+  opacity: 0;
+  transform: translateY(1px);
+  transition: opacity 0.1s ease, transform 0.2s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.WelcomeToAdaptify.animate {
+  animation: slideUp 0.8s ease forwards;
+}
+
+.aboutInfo{
+  padding-bottom: 40px;
+  height: 70%;
+  word-spacing: 3px;
+  text-align:justify;
+  font-family: "Nunito Sans", sans-serif;
+  color: rgb(214, 214, 214);
+  font-size: 30px;
+  line-height: 55px;
+  opacity: 0;
+  transform: translateY(20px); 
+  transition: all 0.8s ease-out;
+}
+
+.list{
+  padding: 20px;
+  background: linear-gradient(to right, rgb(252, 206, 214) 12%,rgb(191, 223, 242) 58%);
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 40px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  opacity: 0; 
+  transform: translateX(-100px); 
+  transition: all 0.6s ease-out;
+}
+.list.animate-visible {
+  opacity: 1; 
+  transform: translateX(0); 
+}
+.aboutList li::before {
+  content: '→'; 
+  margin-right: 10px; 
+  font-size: 20px; 
+}
+
+.aboutInfo2{
+  padding-bottom: 40px;
+  padding-top: 40px;
+  height: 70%;
+  word-spacing: 3px;
+  text-align:justify;
+  font-family: "Nunito Sans", sans-serif;
+  color: rgb(214, 214, 214);
+  font-size: 30px;
+  line-height: 55px;
+  opacity: 0; 
+  transform: translateY(20px); 
+  transition: all 0.8s ease-out; 
+}
+
+.aboutEnd{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 30px;
+  color: whitesmoke;
+  background: linear-gradient(to right, rgb(252, 206, 214) 12%,rgb(191, 223, 242) 58%);
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(30px); /* Slight offset for fade-in effect */
+  transition: all 0.8s ease-out;
+}
+
+
 .what-is-adaptify {
   color: rgb(219, 219, 219);
   display: flex;
@@ -236,7 +343,7 @@ h1 {
   padding: 10px;
   font-weight: bold;
   word-spacing: 3px;
-  font-size: 30px;
+  font-size: 50px;
   opacity: 0;
   transform: translateY(100px);
   transition: opacity 0.5s ease, transform 0.5s ease;
@@ -311,7 +418,6 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 16, 13, 0.5); 
   background: linear-gradient(to left, #000714, #060009); 
   backdrop-filter: blur(10px); 
   opacity: 0;
@@ -375,7 +481,6 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 16, 13, 0.5); 
   background: linear-gradient(to left, #000714, #060009); 
   backdrop-filter: blur(10px); 
   opacity: 0;
@@ -442,7 +547,6 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 16, 13, 0.5); 
   background: linear-gradient(to left, #000714, #060009); 
   backdrop-filter: blur(10px);  
   opacity: 0;
